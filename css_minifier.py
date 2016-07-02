@@ -1,11 +1,14 @@
+# -*- coding: utf-8 -*-
+
 import re
 
 def main():
-    filename = "../style.css"
-    filename2 = "../style-mini.css"
-    file1 = open(filename)
-    file2 = open(filename2, "wt")
+    filename = "../temp/style.css"
+    filename2 = "../temp/style-mini.css"
+    file1 = open(filename, encoding="utf8")
+    file2 = open(filename2, "wt", encoding="utf8")
     text = file1.read()
+    print(text)
 
     for text_one in text.split("/*"):
         if text_one:
